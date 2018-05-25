@@ -24,3 +24,7 @@ class User(object):
             self.password = hash(password)
         else:
             print("New password must be different from old one!")
+
+
+def __add_to_db(base, engine):
+    base.metadata.create_all(engine)
